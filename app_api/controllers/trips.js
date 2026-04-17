@@ -105,7 +105,7 @@ const tripsAddTrip = async(req, res) => {
     { // Database returned no data
         return res
             .status(400)
-            .json(err);
+            .json({ message: "No data returned." });
     } else { // Return resulting updated trip
         return res
             .status(201)
